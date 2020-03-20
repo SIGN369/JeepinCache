@@ -1,9 +1,9 @@
-package com.jeepin.cache.app;
+package com.irobotzz.cache.app;
 
 
 import java.io.IOException;
 
-import com.jeepin.cache.io.CacheUtils;
+import com.irobotzz.cache.io.CacheUtils;
 
 /**
  * Sample

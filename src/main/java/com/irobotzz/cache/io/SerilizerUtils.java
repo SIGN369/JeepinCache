@@ -1,4 +1,4 @@
-package com.jeepin.cache.io;
+package com.irobotzz.cache.io;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.jeepin.cache.def.SerilizerDef;
+import com.irobotzz.cache.def.SerilizerDef;
 
 /**
  * SerilizerUtils that serializes Object to local disk  and deserialize Object from the local disk.
