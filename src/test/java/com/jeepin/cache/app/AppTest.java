@@ -42,8 +42,11 @@ public class AppTest
 	    }
 	    public static void clearCacheTest() {
 	    	CacheUtils util=new CacheUtils();
+	    	//Clear a specified cache with a given cache key.
 			util.remove("userCacheDir","userCache");
+			//Clear all cache under a specified directory
 			util.removeCacheDir("userCacheDir");
+			// Clear all cache
 			util.clear();
 	    }
 }

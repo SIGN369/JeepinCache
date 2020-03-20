@@ -6,7 +6,6 @@
   <artifactId>JeepinCache</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
-
   <name>jpcache</name>
   <url>http://maven.apache.org</url>
 
@@ -14,7 +13,53 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <common-io-version>2.6</common-io-version>
   </properties>
+ <!-- 项目成立年份，非必须 -->
+    <inceptionYear>2017</inceptionYear>
+    
+    <!-- 许可证，最好是加上避免以后产生不必要的麻烦 -->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
+    <!-- 仓库地址，scm:xxx:xxx 是一种协议，看着写就行了git的话一般就是scm:git:git -->
+    <scm>
+        <url>https://github.com/tangxbai/mybatis-mapper.git</url>
+        <connection>scm:git:git@github.com:tangxbai/mybatis-mapper.git</connection>
+        <developerConnection>scm:git:git@github.com:tangxbai/mybatis-mapper.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- 问题管理系统，非必须，写上最好 -->
+    <issueManagement>
+        <system>GitHub Issue Management</system>
+        <url>https://github.com/tangxbai/mybatis-mapper/issues</url>
+    </issueManagement>
+
+    <!-- 发布管理，要想发布到中央库就必须要配置的一个节点，以下两个链接可以从issue审核结果中找到 -->
+    <!-- 其中id为自定义，后面会在maven/config/settings.xml中配置对应的服务器信息 -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
+    <!-- 开发者列表，个人的话就写自己，团队就罗列所有成员 -->
+    <developers>
+        <developer>
+            <name>FlintZheng</name>
+            <email>1337544370@qq.com</email>
+            <timezone>GMT+8</timezone>
+            <url>https://github.com/FlintZheng</url>
+        </developer>
+    </developers>
+    
   <dependencies>
   <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 	<dependency>
