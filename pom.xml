@@ -32,24 +32,7 @@
         <tag>HEAD</tag>
     </scm>
 
-    <!-- 问题管理系统，非必须，写上最好 -->
-    <issueManagement>
-        <system>GitHub Issue Management</system>
-        <url>https://github.com/tangxbai/mybatis-mapper/issues</url>
-    </issueManagement>
 
-    <!-- 发布管理，要想发布到中央库就必须要配置的一个节点，以下两个链接可以从issue审核结果中找到 -->
-    <!-- 其中id为自定义，后面会在maven/config/settings.xml中配置对应的服务器信息 -->
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
-    </distributionManagement>
     <!-- 开发者列表，个人的话就写自己，团队就罗列所有成员 -->
     <developers>
         <developer>
@@ -143,76 +126,15 @@
             </build>
             <distributionManagement>
                 <snapshotRepository>
-                    <id>oss</id>
+                    <id>ossrh</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
-                    <id>oss</id>
+                    <id>ossrh</id>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
         </profile>
     </profiles>
-  <!--  <build>  
-    <plugins>  
-       
-                    Javadoc，文档插件，非必须，打包后生成 xxx-javadoc.jar 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                           Jdk1.8以后文档的生成校验非常严谨，这里可以关掉文档校验
-                            <doclint>none</doclint>
-                            <applyJavadocSecurityFix>false</applyJavadocSecurityFix>
-                            <failOnError>false</failOnError>
-                            <failOnWarnings>false</failOnWarnings>
-                            <additionalparam>-Xdoclint:none</additionalparam>
-                            <additionalJOption>-Xdoclint:none</additionalJOption>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            GPG签名校验，必须，这个很重要，上传到中央库时用来验证签名很重要的一个凭证 
-            后面关于GPG签名会详细说到，这里先添加GPG插件 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>github808782</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-             License，非必须，用于在源文件头部生成一段许可证文本注释 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <version>2.0.0</version>
-                <executions>
-                    <execution>
-                        <id>generate-license-headers</id>
-                        <goals>
-                            <goal>update-file-header</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                    </execution>
-                </executions>
-            </plugin>
-              
-        </plugins>  
-</build>-->
+  
 </project>
