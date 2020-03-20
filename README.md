@@ -12,9 +12,9 @@ A local cache tool used to storage program-status,so in case of  program interru
 CacheUtils util=new CacheUtils();
 TestVO pp =new TestVO();
 pp.setName("Tom");
-//Add cache with key test under directory userCache.
+//Add cache with key test to directory userCache.
 util.add("userCacheDir","userCache", pp);
-//Add cache with test under  default directory.
+//Add cache with key-test to default directory.
 util.add("testCache", pp);
 //Get Cache
 TestVO object = (TestVO) util.get("userCacheDir","userCache");
