@@ -4,7 +4,7 @@
 
   <groupId>com.irobotzz.cache</groupId>
   <artifactId>JeepinCache</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <packaging>jar</packaging>
   <name>jpcache</name>
   <url>http://maven.apache.org</url>
