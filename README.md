@@ -2,7 +2,7 @@
 A local cache tool used to storage program-status,so in case of  program interrupted we can have program-status persisted in disk and  the next time we can keep our program going from the interrupted point and don't have to start it all over again.
 
 
-# How it work
+# How it works
   Quite simple,look at the flowchart given below.
      ![image]( https://github.com/FlintZheng/JeepinCache/blob/master/image/process.png)
      
