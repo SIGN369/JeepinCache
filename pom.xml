@@ -75,10 +75,12 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
-  <build>  
-    <plugins>  
-        <plugin>  
+  <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                 <plugin>  
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>  
                 <version>3.1</version>  
@@ -87,7 +89,74 @@
                     <target>1.8</target>  
                 </configuration>  
             </plugin>
-                   <!-- Javadoc，文档插件，非必须，打包后生成 xxx-javadoc.jar -->
+                    <!-- Source -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>2.2.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.9.1</version>
+                        <configuration>
+                            <show>private</show>
+                            <nohelp>true</nohelp>
+                                    <charset>UTF-8</charset>
+                <encoding>UTF-8</encoding>
+                <docencoding>UTF-8</docencoding>
+                <additionalparam>-Xdoclint:none</additionalparam>  <!-- TODO 临时解决不规范的javadoc生成报错,后面要规范化后把这行去掉 -->
+            </configuration>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- GPG -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>oss</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>oss</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+  <!--  <build>  
+    <plugins>  
+       
+                    Javadoc，文档插件，非必须，打包后生成 xxx-javadoc.jar 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -99,7 +168,7 @@
                             <goal>jar</goal>
                         </goals>
                         <configuration>
-                            <!-- Jdk1.8以后文档的生成校验非常严谨，这里可以关掉文档校验-->
+                           Jdk1.8以后文档的生成校验非常严谨，这里可以关掉文档校验
                             <doclint>none</doclint>
                             <applyJavadocSecurityFix>false</applyJavadocSecurityFix>
                             <failOnError>false</failOnError>
@@ -111,8 +180,8 @@
                 </executions>
             </plugin>
 
-            <!-- GPG签名校验，必须，这个很重要，上传到中央库时用来验证签名很重要的一个凭证 -->
-            <!-- 后面关于GPG签名会详细说到，这里先添加GPG插件 -->
+            GPG签名校验，必须，这个很重要，上传到中央库时用来验证签名很重要的一个凭证 
+            后面关于GPG签名会详细说到，这里先添加GPG插件 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
@@ -128,7 +197,7 @@
                 </executions>
             </plugin>
 
-            <!-- License，非必须，用于在源文件头部生成一段许可证文本注释 -->
+             License，非必须，用于在源文件头部生成一段许可证文本注释 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>license-maven-plugin</artifactId>
@@ -145,5 +214,5 @@
             </plugin>
               
         </plugins>  
-</build>
+</build>-->
 </project>
