@@ -120,7 +120,7 @@
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
-                        <phase>verify</phase>
+                        <phase>github808782</phase>
                         <goals>
                             <goal>sign</goal>
                         </goals>
