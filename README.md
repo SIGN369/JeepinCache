@@ -8,7 +8,7 @@ A local cache tool used to storage program-status,so in case of  program interru
      
 # How to Use
 ## Add cache 
-  '''  
+ ```  
   	  CacheUtils util=new CacheUtils();
 			TestVO pp =new TestVO();
 			pp.setName("Tom");
@@ -19,10 +19,10 @@ A local cache tool used to storage program-status,so in case of  program interru
 			//Get Cache
 			TestVO object = (TestVO) util.get("userCacheDir","userCache");
 			System.out.println(object.getName());
-	''' 
+	``` 
        
 ## Get cache
-   '''  
+   ```  
   	  CacheUtils util=new CacheUtils();
 			//Get Cache
 			TestVO object = (TestVO) util.get("userCacheDir","userCache");
@@ -30,9 +30,9 @@ A local cache tool used to storage program-status,so in case of  program interru
 			//Get  Cache
 			TestVO ds = (TestVO) util.get("testCache");
 			System.out.println(ds.getName());
-  '''
+ ```
 ## Clear cache
-'''
+```
     CacheUtils util=new CacheUtils();
 	    	//Clear a specified cache with a given cache key.
 			util.remove("userCacheDir","userCache");
@@ -40,4 +40,4 @@ A local cache tool used to storage program-status,so in case of  program interru
 			util.removeCacheDir("userCacheDir");
 			// Clear all cache
 			util.clear();
- '''
+```
