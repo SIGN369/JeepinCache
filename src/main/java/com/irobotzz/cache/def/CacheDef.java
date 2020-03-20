@@ -28,7 +28,7 @@ public interface CacheDef {
 	 */
 	public  void add(String key, Object value) throws IOException;
 	/**
-	 * Get Cache from disk by given directory and key.
+	 * Get Cache from disk with given directory and key.
 	 * @param directory
 	 * @param key
 	 * @return
@@ -37,7 +37,7 @@ public interface CacheDef {
 	 */
 	public  Object get(String directory, String key) throws ClassNotFoundException, IOException;
 	/**
-	 * Get Cache from disk by given  key.
+	 * Get Cache from disk with given  key.
 	 * @param key
 	 * @return
 	 * @throws ClassNotFoundException
@@ -45,13 +45,13 @@ public interface CacheDef {
 	 */
 	public  Object get(String key) throws ClassNotFoundException, IOException;
 	/**
-	 * Delete specified cache from disk by given directory and key.
+	 * Delete specified cache from disk with given directory and key.
 	 * @param directory
 	 * @param key
 	 */
 	public  void remove(String directory, String key);
 	/**
-	 * Delete specified cache from dis by given key.
+	 * Delete specified cache from disk with given key.
 	 * @param key
 	 */
 	public  void remove(String key);
