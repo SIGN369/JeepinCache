@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
   <name>jpcache</name>
   <url>http://maven.apache.org</url>
-
+<description>A local cache tool used to storage program-status.</description>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <common-io-version>2.6</common-io-version>
