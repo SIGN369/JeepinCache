@@ -9,16 +9,16 @@ A local cache tool used to storage program-status,so in case of  program interru
 # How to Use
 ## Add cache 
  ```  
-  	CacheUtils util=new CacheUtils();
-	TestVO pp =new TestVO();
-	pp.setName("Tom");
-	//Add cache with key test under directory userCache.
-	util.add("userCacheDir","userCache", pp);
-	//Add cache with test under  default directory.
-	util.add("testCache", pp);
-	//Get Cache
-	TestVO object = (TestVO) util.get("userCacheDir","userCache");
-	System.out.println(object.getName());
+CacheUtils util=new CacheUtils();
+TestVO pp =new TestVO();
+pp.setName("Tom");
+//Add cache with key test under directory userCache.
+util.add("userCacheDir","userCache", pp);
+//Add cache with test under  default directory.
+util.add("testCache", pp);
+//Get Cache
+TestVO object = (TestVO) util.get("userCacheDir","userCache");
+System.out.println(object.getName());
 ``` 
        
 ## Get cache
