@@ -14,7 +14,7 @@
     <common-io-version>2.6</common-io-version>
   </properties>
  <!-- 项目成立年份，非必须 -->
-    <inceptionYear>2017</inceptionYear>
+    <inceptionYear>2020</inceptionYear>
     
     <!-- 许可证，最好是加上避免以后产生不必要的麻烦 -->
     <licenses>
@@ -26,9 +26,9 @@
 
     <!-- 仓库地址，scm:xxx:xxx 是一种协议，看着写就行了git的话一般就是scm:git:git -->
     <scm>
-        <url>https://github.com/tangxbai/mybatis-mapper.git</url>
-        <connection>scm:git:git@github.com:tangxbai/mybatis-mapper.git</connection>
-        <developerConnection>scm:git:git@github.com:tangxbai/mybatis-mapper.git</developerConnection>
+        <url>https://github.com/FlintZheng/JeepinCache.git</url>
+        <connection>scm:git:git@github.com:FlintZheng/JeepinCache.git</connection>
+        <developerConnection>scm:git:git@github.com:FlintZheng/JeepinCache.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
