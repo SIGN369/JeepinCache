@@ -7,6 +7,14 @@ A local cache tool used to storage program-status,so in case of  program interru
      ![image]( https://github.com/FlintZheng/JeepinCache/blob/master/image/process.png)
      
 # How to Use
+## use in maven
+```
+ <dependency>
+	  <groupId>com.irobotzz.cache</groupId>
+	  <artifactId>JeepinCache</artifactId>
+	  <version>1.2</version>
+    </dependency>
+```
 ## Add cache 
  ```  
 CacheUtils util=new CacheUtils();
