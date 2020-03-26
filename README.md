@@ -4,9 +4,8 @@ A local cache tool used to storage program-status,so in case of  program interru
 
 
 # How it works
-  Quite simple,look at the flowchart given below.
-   
-	![image]( https://github.com/FlintZheng/JeepinCache/blob/master/image/process.png)
+  Quite simple,look at the flowchart given below.  
+![image]( https://github.com/FlintZheng/JeepinCache/blob/master/image/process.png)
      
 # How to Use
 ## use in maven
