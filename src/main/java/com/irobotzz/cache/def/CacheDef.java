@@ -14,9 +14,9 @@ public interface CacheDef {
 	public static final String parentDirectory="JeepinCache";
     /**
      * Add a Cache to a specified directory.
-     * @param directory  
-     * @param key 
-     * @param value
+     * @param directory   	The directory where the caches are stored.
+     * @param key Key for the Object.
+     * @param value  Object to be stored.
      * @throws IOException 
      */
 	public  void add(String directory, String key, Object value) throws IOException;
@@ -29,7 +29,7 @@ public interface CacheDef {
 	public  void add(String key, Object value) throws IOException;
 	/**
 	 * Get Cache from disk with given directory and key.
-	 * @param directory
+	 * @param directory The directory where the caches are stored.
 	 * @param key
 	 * @return
 	 * @throws IOException 
@@ -45,13 +45,13 @@ public interface CacheDef {
 	 */
 	public  Object get(String key) throws ClassNotFoundException, IOException;
 	/**
-	 * Delete specified cache from disk with given directory and key.
+	 * Delete specified cache from disk with a given directory and key.
 	 * @param directory
 	 * @param key
 	 */
 	public  void remove(String directory, String key);
 	/**
-	 * Delete specified cache from disk with given key.
+	 * Delete specified cache from disk with a  given key.
 	 * @param key
 	 */
 	public  void remove(String key);
