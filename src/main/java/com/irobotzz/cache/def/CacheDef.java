@@ -22,15 +22,15 @@ public interface CacheDef {
 	public  void add(String directory, String key, Object value) throws IOException;
 	/**
 	 * Add a Cache to the default directory.
-	 * @param key
-	 * @param value
+	 * @param key  Key for the Object.
+	 * @param value Object to be stored.
 	 * @throws IOException
 	 */
 	public  void add(String key, Object value) throws IOException;
 	/**
 	 * Get Cache from disk with given directory and key.
 	 * @param directory The directory where the caches are stored.
-	 * @param key
+	 * @param key  
 	 * @return
 	 * @throws IOException 
 	 * @throws ClassNotFoundException 
