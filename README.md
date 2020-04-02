@@ -2,7 +2,7 @@
 
 # JeepinCache
 A local cache tool used to storage program-status,so in case of  program interrupted we can have program-status persisted in disk and  the next time we can keep our program going from the interrupted point and don't have to start it all over again.
-
+本地磁盘缓存工具用于存储程序执行状态，这样在断电或者程序中断的时候可以将执行状态持久化到本地磁盘中，下次启动时直接读取执行状态继续执行，不用从头开始工作（比如：爬虫、更新数据等等）
 
 # How it works
   Quite simple,look at the flowchart given below.  
