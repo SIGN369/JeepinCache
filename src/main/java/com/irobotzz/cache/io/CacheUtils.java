@@ -21,8 +21,9 @@ public class CacheUtils implements CacheDef {
 	 */
 	static{
 		if(!parentDir.isDirectory()) {
-			parentDir.mkdir();
-			}
+			boolean mkdir = parentDir.mkdir();
+			
+		}
 		}
 	
 	public void add(String directory, String key, Object value) throws IOException {
@@ -36,12 +37,19 @@ public class CacheUtils implements CacheDef {
 		add(defaultCacheDIr,key,value);
 	}
 
-	public Object get(String directory, String key) throws ClassNotFoundException, IOException {
+	public Object get(String directory, String key) {
 		File file = new File(parentDir,directory+File.separator+key);
-		return cacheUtil.deserialize(file);
+		try {
+			return cacheUtil.deserialize(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
-	public Object get(String key) throws ClassNotFoundException, IOException {
+	public Object get(String key){
 		return get(defaultCacheDIr,key);
 	}
 
